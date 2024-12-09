@@ -1,5 +1,7 @@
-from API.test import *
-from Models.Post import *
+import streamlit as st
+from Views import FeedView, AddPostView
+from Services import get_feed, add_post
 
-def cool_action():
-    print('MAIN')
+AddPostView(add_post)
+st.write("___")
+FeedView(get_feed)
